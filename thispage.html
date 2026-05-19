@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles's Web Page - Chelsea FC</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://th.bing.com/th/id/OIP.vWHQX37RFgDfdYrZ5j3vwgHaEK?rs=1&pid=ImgDetMain");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        #title {
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0A67A3; /* Chelsea Blue */
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 1.6rem;
+            background-color: #0A67A3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: black;
+            font-size: 1.8rem;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="title">
+        <h1>Welcome to Charles's Web Page</h1>
+        <p>Chelsea We Are The Blues</p>
+        <button onclick="DoAmIfEEasy()">Champions Of The World</button>
+    </div>
+
+    <script>
+        function DoAmIfEEasy() {
+            alert("Only Easy For The Blues! 💙");
+
+            // Change background image 
+            document.body.style.backgroundImage = 'url("https://tse2.mm.bing.net/th/id/OIP.csaHSr3ZuAYNYIhg9Fqj7wHaEV?rs=1&pid=ImgDetMain")';
+            
+            // Hide the title section
+            document.getElementById("title").style.visibility = "hidden";
+        }
+    </script>
+
+</body>
+</html>
