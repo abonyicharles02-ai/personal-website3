@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="mystyle.css">./titlesection/titlesection.css
-    <title>Charles's Web Page - Chelsea FC</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charles's Web Page - Chelsea FC</title>
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url("https://th.bing.com/th/id/OIP.vWHQX37RFgDfdYrZ5j3vwgHaEK?rs=1&pid=ImgDetMain");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-    
-    </style>
+    <title>Charles's Web Page</title>
 </head>
 <body>
-
     <div id="title">
-        <h1>Welcome to Charles's Web Page</h1>
+        <img src="https://wallpapercave.com/wp/wp15630591.jpg" width="200px" alt="Chelsea">
+        <h1>Welcome to Charles's web page</h1>
         <p>Chelsea We Are The Blues</p>
         <button onclick="DoAmIfEEasy()">Champions Of The World</button>
     </div>
 
-    <script>
-        function DoAmIfEEasy() {
-            alert("Only Easy For The Blues! 💙");
+<style>
 
-            // Change background image 
-            document.body.style.backgroundImage = 'url("https://tse2.mm.bing.net/th/id/OIP.csaHSr3ZuAYNYIhg9Fqj7wHaEV?rs=1&pid=ImgDetMain")';
-            
-            // Hide the title section
-            document.getElementById("title").style.visibility = "hidden";
-        }
-    </script>
+body{
+    background-image: url("https://wallpapercave.com/wp/wp15630591.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
+h1 {
+    color: blue;
+}
+
+button:hover {
+    background-color: black;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#title {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+</style>
+
+<script>
+
+function DoAmIfEEasy() {
+    alert("Only Easy For The Blues");
+
+    // Change background image 	
+    document.body.style.backgroundImage = 'url("https://wallpapercave.com/wp/wp15630591.jpg")';
+
+    //Hide the title section
+    document.getElementById("title").style.visibility = "hidden";
+}
+
+</script>
 </body>
 </html>
