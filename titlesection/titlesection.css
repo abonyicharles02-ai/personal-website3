@@ -1,35 +1,15 @@
-        #title {
-            width: 100%;
-            text-align: center;
-            margin-top: 100px;
-            padding: 20px;
-        }
+h1 {
+    color: blue;
+}
 
-        h1 {
-            color: #0A67A3; /* Chelsea Blue */
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-        }
+button:hover {
+    background-color: black;
+    cursor: pointer;
+    font-size: 20px;
+}
 
-        p {
-            font-size: 1.8rem;
-            color: white;
-        }
-
-        button {
-            margin-top: 30px;
-            padding: 15px 40px;
-            font-size: 1.6rem;
-            background-color: #0A67A3;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        button:hover {
-            background-color: black;
-            font-size: 1.8rem;
-            transform: scale(1.1);
-        }
+#title {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
