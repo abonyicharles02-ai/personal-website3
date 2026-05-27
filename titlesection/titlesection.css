@@ -11,4 +11,6 @@ button:hover {
 #title {
     text-align: center;
     padding-top: 200px;
+    background-image: url('../images/photo web.avif');
+    background-position: center top;
 }
