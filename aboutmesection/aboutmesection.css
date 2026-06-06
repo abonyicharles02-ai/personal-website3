@@ -4,4 +4,20 @@
 
 .aboutme-section-description {
     text-align: justify;
+    margin-top: 40px;
+}
+
+.aboutme-icons {
+    font-size: 25px;
+    margin-top: 45px;
+}
+
+.aboutem-icon {
+    margin: 10px;
+    color: green;
+}
+
+.aboutem-icon:hover {
+    color: black;
+    cursor: pointer;
 }
