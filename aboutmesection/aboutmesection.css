@@ -10,6 +10,11 @@
 .aboutme-icons {
     font-size: 25px;
     margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.aboutme-icons > a {
+    text-decoration: none;
 }
 
 .aboutem-icon {
@@ -20,4 +25,8 @@
 .aboutem-icon:hover {
     color: black;
     cursor: pointer;
+}
+
+.aboutme-download-link > a {
+    color: black;
 }
