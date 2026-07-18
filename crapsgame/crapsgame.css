@@ -1,19 +1,29 @@
+:root {
+    --width-scale:min(600px, 80vw, 80vh);
+    --height-scale: calc(var(--width-scale) * 0.539); 
+    --game-title-size: min(calc(var(--height-scale) * 0.2), 2em);
+    --title-margin-bottom: calc(var(var(--height-scale) * 0.25));
+}
+
 #craps-game{
     background-image: url('../images/Vegas.jpg');
     background-position: center top;
     color: black;
+    padding: 1px;
 }
 
 .craps-game-title {
+    font-size: var(--game-title-size); 
     text-align: center;
-    margin-top: 20px;
+    margin-top: calc(calc(100vh - var(--game-title-size) - var(--title-margin-bottom) - var(--height-scale))) / 2;
+    margin-bottom: calc(var(--height-scale) * 0.25)
 }
 
 .craps-game-container{
-    width: min(600px, 80vw);
-    height: min(350px, 47vw);
+    width: var(--width-scale);
+    height: var(--height-scale);
     border: solid white 2px;
-    margin: 100px auto 0 auto;
+    margin: 0 auto;
     background-image: url('../images/CrapsTable.jpg');
     background-size: cover;
     background-position: center top;
