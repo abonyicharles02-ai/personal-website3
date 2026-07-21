@@ -9,7 +9,7 @@
     background-image: url('../images/Vegas.jpg');
     background-position: center top;
     color: black;
-    padding: 1px;
+    padding: 40px;
 }
 
 .craps-game-title {
@@ -30,7 +30,8 @@
 }
 
 #craps-registration-pane{
-    margin-top: 55px;
+    margin-top: calc(var(--height-scale) * 0.15);
+    font-size: calc(var(--game-title-size) * 0.5);
     text-align: center;
     color: white;
 }
@@ -40,17 +41,14 @@
     background: none;
     border: none;
     border-bottom: solid white 1px;
-    margin-top: 25px;
+    margin: calc(var(--height-scale) * 0.055) 0;
     color: white;
+    font-size: calc(var(--game-title-size) * 0.5);
     text-align: center;
 }   
 
 .craps-registration-input:focus{
     outline-width: none;
-}
-
-.craps-registration-continue{
-    margin-top: 25px;
 }
 
 .craps-registration-continue:hover{
@@ -65,10 +63,11 @@
 
 .craps-main-section-stats {
     text-align: center;
-    margin-top: 70px;
+    font-size: calc(var(--height-scale) * 0.07);
+    margin-top: calc(var(--height-scale) * 0.09);
 }
 
 #craps-stats-money-container {
-    font-size: 30px;
-    margin: 25px 0 5px 0;
+    font-size: calc(var(--height-scale) * 0.15);
+    margin: calc(var(--height-scale) * 0.1);
 }
