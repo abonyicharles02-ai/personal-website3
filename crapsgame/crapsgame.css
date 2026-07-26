@@ -1,5 +1,5 @@
 :root {
-    --width-scale:min(650px, 90vw, 90vh);
+    --width-scale:min(750px, 95vw, 100vh);
     --height-scale: calc(var(--width-scale) * 0.639); 
     --game-title-size: min(calc(var(--height-scale) * 0.2), 2em);
     --title-margin-bottom: calc(var(var(--height-scale) * 0.25));

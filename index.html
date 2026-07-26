@@ -69,7 +69,8 @@
                     </div> 
                 </div>
                 <div class="craps-on-table-container">
-                    <div class="craps-roll-dice-container no-select">Roll Dice <i class="fa-solid fa-dice"></i></div>
+                    <div id="craps-roll-dice-button" class="craps-roll-dice-container no-select" onclick="rollDice()">Roll Dice <i class="fa-solid fa-dice"></i></div>
+                <div id="craps-roll-dice-animation-container"></div>
                 </div>     
                     <div class="craps-round-manager no-select">
                         <div class="craps-betting-grid no-select">
@@ -128,6 +129,7 @@ html, body{
 </style>
 
 <script src="./crapsgame/crapsgame.js"></script>
+<script type="text/javascript" src="./crapsgame/rollADie.js"></script>
 <script>
 
 function DoAmIfEEasy () {
