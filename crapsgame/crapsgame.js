@@ -104,14 +104,14 @@ function rollDice () {
 }
 
 function formatDiceScale () {
-    const vw = window.innerWidth = 0.95
-    const vh = window.innerHeight = 1
+    const vw = window.innerWidth * 0.95
+    const vh = window.innerHeight * 1
     const widthScale = Math.min(750, vw, vh)
-    const heightScale = widthScale * 0.639
-    const scale = heightScale / 0.60705
-    document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale(" + scale +")"
+    const heightScale = widthScale * 0.6835
+    const scale = heightScale / 401.898
+    document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale(" + scale + ")"
 }
-
+    
 function processDiceResult (diceResult) {
     console.log(diceResult)
 }
