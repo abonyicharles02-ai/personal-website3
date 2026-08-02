@@ -86,9 +86,6 @@
     position: absolute;
     bottom: calc(var(--height-scale) * 0.04);
     font-size: calc(var(--height-scale) * 0.04);
-    -webkit-user-select: none; /*safari */
-    -ms-user-select: none; /* IE 10 and IE 11*/
-    user-select: none; /* Standard syntax */
 }
 
 .craps-roll-dice-container {
@@ -99,6 +96,11 @@
 .craps-roll-dice-container:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+#craps-roll-dice-animation-container {
+    margin-top: calc(var(--height-scale) * -0.15);
+    margin-left: calc(var(--height-scale) * -0.15);
 }
 
 .craps-betting-grid {

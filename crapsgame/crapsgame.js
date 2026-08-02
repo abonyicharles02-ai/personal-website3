@@ -97,9 +97,19 @@ function setBetAmount (betAmount) {
 }
 
 function rollDice () {
+    formatDiceScale()
     document.getElementById(crapsRollDiceButton).style.display = "none"
     const diceRollElement = document.getElementById(crapsRollDiceAnimationContainer)
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult, delay: 10000000 });
+}
+
+function formatDiceScale () {
+    const vw = window.innerWidth = 0.95
+    const vh = window.innerHeight = 1
+    const widthScale = Math.min(750, vw, vh)
+    const heightScale = widthScale * 0.639
+    const scale = heightScale / 0.60705
+    document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale(" + scale +")"
 }
 
 function processDiceResult (diceResult) {
