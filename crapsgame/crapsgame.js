@@ -105,7 +105,7 @@ function rollDice () {
     formatDiceScale()
     document.getElementById(crapsRollDiceButton).style.display = "none"
     const diceRollElement = document.getElementById(crapsRollDiceAnimationContainer)
-    rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult, delay: 10000000 });
+    rollADie({ element: diceRollElement, numberOfDice: 2, callback: delayedProcessDiceResult, delay: 10000000 });
 }
 
 window.addEventListener("resize", formatDiceScale);
@@ -117,7 +117,11 @@ function formatDiceScale () {
     const scale = heightScale / 401.898
     document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale(" + scale + ")"
 }
-    
+ 
+function delayedProcessDiceResult (diceResult) {
+    setTimeout(function() { processDiceResult(diceResult) }, 1000) 
+}
+
 function processDiceResult (diceResult) {
     const sum = diceResult.reduce((partialSum, a) => partialSum + a, 0);
     let diceSumResult = bets.even
