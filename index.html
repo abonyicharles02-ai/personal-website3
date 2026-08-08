@@ -70,11 +70,12 @@
                 </div>
                 <div class="craps-on-table-container">
                     <div id="craps-roll-dice-button" class="craps-roll-dice-container no-select" onclick="rollDice()">Roll Dice <i class="fa-solid fa-dice"></i></div>
-                <div id="craps-roll-dice-animation-container"></div>
+                    <div id="craps-roll-dice-animation-container"></div>
                 </div>     
-                    <div class="craps-round-manager no-select">
+                <div class="craps-round-manager no-select">
+                    <div id="craps-betting-grid-container">
                         <div class="craps-betting-grid no-select">
-                            <div class="craps-bet-button" id="EVEN" onclick="betEven()">
+                        <div class="craps-bet-button" id="EVEN" onclick="betEven()">
                             EVEN
                         </div>
                         <div class="craps-bet-amount-container">
@@ -82,14 +83,27 @@
                             <span id="craps-user-bet-amount">$100</span>
                             <span class="craps-user-bet-amount-change" onclick="increaseBet()">+</span>
                         </div>
-                    <div class="craps-bet-button" id="ODD" onclick="betOdd()">
+                         <div class="craps-bet-button" id="ODD" onclick="betOdd()">
                             ODD
                         </div>   
-                    </div>             
-                </div>    
+                    </div>                 
+                 </div>
+                 <div id="craps-round-finish-grid-container">
+                        <div class="craps-round-finish-grid no-select">
+                        <div class="craps-round-finish-button">
+                            NEXT ROUND
+                        </div>
+                        <div id="craps-round-finish-message">
+                            YOU WIN!
+                        </div>
+                         <div class="craps-round-finish-button"> 
+                            EXIT GAME
+                        </div>   
+                    </div>                 
+                 </div>
+                </div> 
             </div>
-        </div>
-    </div>    
+         </div>    
 </body>
 <style>
 

@@ -108,15 +108,15 @@
     grid-template-columns: 33% auto 33%;
     width: 80%;
     margin: 0 auto;
-    border: solid green 2px;
+    border: solid white 2px;
     border-radius: 5px;
 }
 
-.craps-bet-button {
-    padding: calc(var(--height-scale) * 0.03);
+.craps-bet-button, .craps-round-finish-button {
+   padding: calc(var(--height-scale) * 0.03);
 }
 
-.craps-bet-button:hover {
+.craps-bet-button:hover, .craps-round-finish-button:hover {
     cursor: pointer;
     font-weight: bold;
 }
@@ -135,4 +135,20 @@
 .craps-user-bet-amount-change:hover {
     cursor: pointer;
     font-weight: bold;
+}
+
+.craps-round-finish-grid {
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    width: 80%;
+    margin: 0 auto;
+    border: solid white 2px;
+    border-radius: 5px;
+}
+
+#craps-round-finish-message {
+    padding: calc(var(--height-scale) * 0.03);
+    border-right: solid white 2px;
+    border-left: solid white 2px;
+    background-color: black;
 }
