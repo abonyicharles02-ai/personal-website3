@@ -61,17 +61,27 @@ function hideMainGameSection() {
     document.getElementById(crapsMainSection).style.display = "none"
 }
 
-function setupFirstRound() {
+function setupNextRound() {
     document.getElementById(crapsRollDiceAnimationContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "none"
     document.getElementById(crapsRollDiceButton).style.display = "block"
     document.getElementById(crapsBettingGridContainer).style.display = "block"
+    canChangeBet = true
+    setBetAmount(minimumBet)
+    setBetAmount(currentBetAmount <= currentMoney ? currentBetAmount : minimumBet)
+}
+
+function setupFirstRound() {
+    document.getElementById(crapsRollDiceAnimationContainer).style.display = "none"
+    document.getElementById(crapsRoundFinishGridContainer).style.display = "none"
+    document.getElementById(crapsRollDiceButton).style.display = "block"
     document.getElementById("craps-stats-username").innerHTML = crapsUsername
     canChangeBet = true
     setMoney(startingMoney)
     setRounds(startingRounds)
     betEven()
     setBetAmount(minimumBet)
+    setUpNextRound()
 }
 
 function setMoney (money) {
@@ -163,7 +173,7 @@ function processDiceResult (diceResult) {
 }
 
 function exitGame () {
-    alert("After Playing " + currentRounds + "rounds, you leave with " + currentMoney + "$!")
+    alert("After Playing " + currentRounds + " rounds, you leave with " + currentMoney + "$!")
     hideMainGameSection()
     showRegistrationPane()
     document.getElementById(crapsUsernameInput).value = ""
