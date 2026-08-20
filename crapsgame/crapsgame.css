@@ -152,3 +152,12 @@
     border-left: solid white 2px;
     background-color: black;
 }
+
+#craps-next-round-button-disabled {
+   background-color: lemonchiffon;
+   color: gray;
+}
+
+#craps-next-round-button-disabled:hover {
+    cursor: not-allowed;
+} 

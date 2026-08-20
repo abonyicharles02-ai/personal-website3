@@ -23,6 +23,8 @@ const crapsRollDiceAnimationContainer = "craps-roll-dice-animation-container"
 const crapsBettingGridContainer = "craps-betting-grid-container"
 const crapsRoundFinishGridContainer = "craps-round-finish-grid-container"
 const crapsRoundFinishMessage = "craps-round-finish-message"
+const crapsNextRoundButton = "craps-next-round-button"
+const crapsNextRoundButtonDisabled = "craps-next-round-button-disabled"
 
 // In-game variables
 let currentRounds = startingRounds
@@ -76,6 +78,8 @@ function setupFirstRound() {
     document.getElementById(crapsRoundFinishGridContainer).style.display = "none"
     document.getElementById(crapsRollDiceButton).style.display = "block"
     document.getElementById("craps-stats-username").innerHTML = crapsUsername
+    document.getElementById(crapsNextRoundButtonDisabled).style.display = "none"
+    document.getElementById(crapsNextRoundButton).style.display = "block"
     canChangeBet = true
     setMoney(startingMoney)
     setRounds(startingRounds)
@@ -166,6 +170,8 @@ function processDiceResult (diceResult) {
     }
     if (currentMoney === 0) {
         roundFinishMessage = "DAMN MY BOII"
+        document.getElementById(crapsNextRoundButtonDisabled).style.display = "block"
+        document.getElementById(crapsNextRoundButton).style.display = "none"
     }
     document.getElementById(crapsBettingGridContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "block"
