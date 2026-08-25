@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="./titlesection/titlesection.css">
     <link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
     <link rel="stylesheet" href="./crapsgame/crapsgame.css">
+    <link rel="stylesheet" href="./crapsgame/utils.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -42,11 +43,72 @@
             </div>
         </div>
     <div class="main-section" id="craps-game">
-        <h1 class="craps-game-title">Craps Casino Game</h1>
+        <div class="craps-game-title">Craps Casino Game</div>
         <div class="craps-game-container">
-
-        </div>
-    </div>    
+            <div id="craps-registration-pane">
+                <div>
+                    Enter username to begin
+                </div>
+                <div>
+                    <input class="craps-registration-input" id="craps-username-input">
+                </div>
+                <div class="craps-registration-continue" onclick="registerCrapsPlayer()">
+                    Continue
+                </div>
+            </div>
+             <div id="craps-main-section">
+                <div class="craps-main-section-stats">
+                    <div>
+                        Welcome, <span id="craps-stats-username"></span>
+                    </div>
+                    <div id="craps-stats-money-container">
+                        $<span id="craps-stats-money"></span>
+                    </div>
+                    <div>
+                        Rounds: <span id="craps-stats-rounds"></span>
+                    </div> 
+                </div>
+                <div class="craps-on-table-container">
+                    <div id="craps-roll-dice-button" class="craps-roll-dice-container no-select" onclick="rollDice()">Roll Dice <i class="fa-solid fa-dice"></i></div>
+                    <div id="craps-roll-dice-animation-container"></div>
+                </div>     
+                <div class="craps-round-manager no-select">
+                    <div id="craps-betting-grid-container">
+                        <div class="craps-betting-grid no-select">
+                        <div class="craps-bet-button" id="EVEN" onclick="betEven()">
+                            EVEN
+                        </div>
+                        <div class="craps-bet-amount-container">
+                            <span class="craps-user-bet-amount-change" onclick="decreaseBet()">-</span>
+                            <span id="craps-user-bet-amount">$100</span>
+                            <span class="craps-user-bet-amount-change" onclick="increaseBet()">+</span>
+                        </div>
+                         <div class="craps-bet-button" id="ODD" onclick="betOdd()">
+                            ODD
+                        </div>   
+                    </div>                 
+                 </div>
+                 <div id="craps-round-finish-grid-container">
+                        <div class="craps-round-finish-grid no-select">
+                        <div id="craps-next-round-button" class="craps-round-finish-button" onclick="setupNextRound()">
+                            NEXT ROUND
+                        </div>
+                        <div id="craps-next-round-button-disabled" class="craps-round-finish-button"> 
+                            NEXT ROUND
+                        </div>
+                        <div  id="craps-round-finish-message">
+                            YOU WIN!
+                        </div>
+                         <div class="craps-round-finish-button" onclick="exitGame()"> 
+                            EXIT GAME
+                        </div>   
+                    </div>                 
+                 </div>
+                </div>
+             </div>
+        </div> 
+    </div>
+      </div>    
 </body>
 <style>
 
@@ -85,16 +147,18 @@ html, body{
    
 </style>
 
+<script src="./crapsgame/crapsgame.js"></script>
+<script type="text/javascript" src="./crapsgame/rollADie.js"></script>
 <script>
 
-function DoAmIfEEasy() {
+function DoAmIfEEasy () {
     alert("Only Easy For The Blues");
 
     // Change background image 	
-    document.body.style.backgroundImage = 'url("https://wallpapercave.com/wp/wp15630591.jpg")';
+    document.body.style.backgroundImage = 'url("https://wallpapercave.com/wp/wp15630591.jpg")'
 
     //Hide the title section
-    document.getElementById("title").style.visibility = "hidden";
+    document.getElementById("title").style.visibility = "hidden"
 }
 
 </script>
